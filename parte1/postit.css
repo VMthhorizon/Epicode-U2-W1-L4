@@ -1,0 +1,74 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  width: 100%;
+  margin: 0;
+  font-family: cursive;
+  color: black;
+}
+
+body section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin: 5em;
+}
+
+h1 {
+  font-weight: 1000;
+}
+
+.post-it {
+  flex-basis: 19%;
+  flex-grow: 1;
+  font-size: 2em;
+  height: 7em;
+  gap: 1em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 10px 8px 0px rgba(0, 0, 0, 0.28);
+  transition: transform 1.2s ease-in-out 0s;
+}
+.post-it:hover {
+  transform: scale(1.2);
+  z-index: 5;
+  cursor: pointer;
+}
+
+#card-1 {
+  background-color: rgb(255, 245, 154);
+  --rot: -4;
+}
+#card-2 {
+  background-color: rgb(181, 255, 154);
+  --rot: 4;
+}
+#card-3 {
+  background-color: rgb(223, 184, 255);
+  --rot: -4;
+}
+#card-4 {
+  background-color: rgb(181, 255, 154);
+  --rot: 4;
+}
+#card-5 {
+  background-color: rgb(255, 245, 154);
+  --rot: -4;
+}
+#card-6 {
+  background-color: rgb(223, 184, 255);
+  --rot: 4;
+}
+#card-7 {
+  background-color: rgb(255, 245, 154);
+  --rot: -4;
+}
+#card-8 {
+  background-color: rgb(181, 255, 154);
+  --rot: 4;
+}
