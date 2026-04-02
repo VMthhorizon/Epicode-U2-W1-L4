@@ -20,7 +20,7 @@ h1 {
   font-weight: 1000;
 }
 
-.post-it {
+section div {
   flex-basis: 19%;
   flex-grow: 1;
   font-size: 2em;
@@ -32,43 +32,70 @@ h1 {
   justify-content: center;
   align-items: center;
   box-shadow: 5px 10px 8px 0px rgba(0, 0, 0, 0.28);
-  transition: transform 1.2s ease-in-out 0s;
+  transform: rotate(-4deg);
+  transition: transform 0.5s ease-in-out 0s;
 }
-.post-it:hover {
+section div:nth-child(even) {
+  transform: rotate(4deg);
+}
+
+section div:nth-child(1) {
+  background-color: rgb(255, 245, 154);
+}
+section div:nth-child(2) {
+  background-color: rgb(181, 255, 154);
+}
+section div:nth-child(3) {
+  background-color: rgb(223, 184, 255);
+}
+section div:nth-child(4) {
+  background-color: rgb(181, 255, 154);
+}
+section div:nth-child(5) {
+  background-color: rgb(255, 245, 154);
+}
+section div:nth-child(6) {
+  background-color: rgb(223, 184, 255);
+}
+section div:nth-child(7) {
+  background-color: rgb(255, 245, 154);
+}
+section div:nth-child(8) {
+  background-color: rgb(181, 255, 154);
+}
+section div:hover {
   transform: scale(1.2);
-  z-index: 5;
+  z-index: 10;
   cursor: pointer;
 }
 
-#card-1 {
-  background-color: rgb(255, 245, 154);
-  --rot: -4;
+@keyframes rain {
+  0% {
+    opacity: 0;
+    transform: scale(10);
+  }
+  s 25% {
+    opacity: 0;
+    transform: scale(8);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(6);
+  }
+  65% {
+    opacity: 0;
+    transform: scale(4);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
-#card-2 {
-  background-color: rgb(181, 255, 154);
-  --rot: 4;
-}
-#card-3 {
-  background-color: rgb(223, 184, 255);
-  --rot: -4;
-}
-#card-4 {
-  background-color: rgb(181, 255, 154);
-  --rot: 4;
-}
-#card-5 {
-  background-color: rgb(255, 245, 154);
-  --rot: -4;
-}
-#card-6 {
-  background-color: rgb(223, 184, 255);
-  --rot: 4;
-}
-#card-7 {
-  background-color: rgb(255, 245, 154);
-  --rot: -4;
-}
-#card-8 {
-  background-color: rgb(181, 255, 154);
-  --rot: 4;
+
+.animation {
+  animation: 1s ease-out 0s rain;
 }
